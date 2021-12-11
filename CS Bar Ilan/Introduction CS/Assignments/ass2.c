@@ -55,7 +55,7 @@ int main()
             scanf(" ", &ch);
             while (ch != '\n')
             {
-                scanf("%d", &ch);
+                scanf("%c", &ch);
                 i = !i;
             }
 
@@ -159,6 +159,18 @@ int main()
                     curr_num *= base;
                     sum += curr_num;
                     curr_place++;
+                    // Binus's way of implementing power within the do-while
+                    // do {
+                    // if (c>= 'A' && c<='F')
+                    //     c+=32;
+
+                    // if (c>='a' && c<='f')
+                    //     num = 10 + c - 'a';
+
+                    //     dec_value += num * i;
+
+                    //     i*=16;
+                    // } while
                 }
                 else
                 {
@@ -179,15 +191,55 @@ int main()
         // Base to Dec
         else if (selection == 5)
         {
-            /* code */
+            int base, baseP, curr_place = 0, notValidFlag = 1;
+            int sum = 0, curr_num;
+            char num;
+            printf("Type in the number's base\n");
+            scanf("%d", &base);
+            printf("Type in the number\n");
+            scanf(" ", &num);
+            scanf("%c", &num);
+            do
+            {
+                if (num >= '0' && num <= (base + 48 - 1))
+                {
+                    curr_num = num - 48;
+                    baseP = 1;
+                    for (int i = 0; i < curr_place; i++)
+                        baseP = baseP * base;
+                    curr_num *= baseP;
+                    sum += curr_num;
+                    curr_place++;
+                }
+                else
+                {
+                    notValidFlag = 0;
+                    printf("Error! %c is not a valid digit in base %d\n", num, base);
+                }
+                scanf("%c", &num);
+            } while (num != '\n');
+
+            if (notValidFlag == 1)
+            {
+                unsigned int hexvalue = 0;
+                hexvalue = sum;
+                printf("The decimal value is %d\n", hexvalue);
+            }
         }
 
         // Count bits
         else if (selection == 6)
         {
-            /* code */
+            int num, sumOfBits = 0;
+            printf("Enter a number\n");
+            scanf("%d", &num);
+            for (int i = 0; i < 32; i++)
+            {
+                sumOfBits += num & 1;
+                num = num >> 1;
+            }
+            printf("The bit count is %d\n", sumOfBits);
         }
-
     } while (selection != 0);
 
     return 0;
