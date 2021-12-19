@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch HelloGoodbye",
+            "request": "launch",
+            "mainClass": "HelloGoodbye",
+            "projectName": "Courses_1df59c1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "Courses_1df59c1e"
+        },
+        {
             "name": "gcc.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
