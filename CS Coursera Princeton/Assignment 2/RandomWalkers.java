@@ -8,7 +8,7 @@ public class RandomWalkers {
             int x = 0, y = 0;
             while ((Math.abs(x) + Math.abs(y)) < r) {
                 double rand = Math.random();
-                if (rand < .25) {
+                if (rand < 0.25) {
                     x++;
                 } else if (rand < 0.5) {
                     y++;

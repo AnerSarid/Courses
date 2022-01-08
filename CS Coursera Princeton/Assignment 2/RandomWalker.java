@@ -7,7 +7,7 @@ public class RandomWalker {
         while ((Math.abs(x) + Math.abs(y)) < r) {
             System.out.println("(" + x + "," + y + ")");
             double rand = Math.random();
-            if (rand < .25) {
+            if (rand < 0.25) {
                 x++;
             } else if (rand < 0.5) {
                 y++;
