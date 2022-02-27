@@ -1,12 +1,6 @@
 {
-  "files.associations": {
-    "stdio.h": "c"
-  },
-  "java.project.sourcePaths": [
-    "CS Coursera Princeton/Assignment 5"
-  ],
-  "java.project.referencedLibraries": [
-    "lib/**/*.jar",
-    "CS Coursera Princeton\\Assignment 9\\stdlib.jar"
-  ]
-}
+    "files.associations": {
+      "stdio.h": "c"
+    },
+    "java.project.sourcePaths": []
+  }

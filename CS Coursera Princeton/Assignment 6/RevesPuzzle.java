@@ -9,9 +9,7 @@ public class RevesPuzzle {
         }
 
         rec4Pole(k, from, to, temp2, temp1);
-
         rec3Pole(n - k, k, from, temp2, to);
-
         rec4Pole(k, temp1, from, temp2, to);
 
     }
